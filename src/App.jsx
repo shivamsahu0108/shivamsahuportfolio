@@ -10,19 +10,19 @@ const WA = import.meta.env.VITE_WHATSAPP;
 const FORM = import.meta.env.VITE_FORM_ENDPOINT;
 
 const projects = [
-  { name: "Zosh E-commerce", repo: "zosh-ecommerce", color: "#A3FFBF", tags: ["React", "Spring Boot", "MySQL"], blurb: "Online store with product catalogue, cart and secure checkout flow." },
-  { name: "Hospital Management System", repo: "Hospital-Mangement-System", color: "#9D8CFF", tags: ["Java", "Spring Boot", "MySQL"], blurb: "Manages patients, doctors and appointments through a role-based backend." },
+  { name: "Zosh E-commerce", repo: "zosh-ecommerce", shot: "/shots/zosh.webp", color: "#A3FFBF", tags: ["React", "Spring Boot", "MySQL"], blurb: "Online store with product catalogue, cart and secure checkout flow." },
+  { name: "Hospital Management System", repo: "Hospital-Mangement-System", shot: "/shots/hospital.webp", color: "#9D8CFF", tags: ["Java", "Spring Boot", "MySQL"], blurb: "Manages patients, doctors and appointments through a role-based backend." },
   { name: "Go Taxi Service", repo: "go-taxi-service", live: "https://gotaxiservice.netlify.app/", shot: "https://image.thum.io/get/https://gotaxiservice.netlify.app/", color: "#FFD27A", tags: ["React", "REST API"], blurb: "Ride booking application with a clean request-and-track experience." },
   { name: "Jabalpur Car Rental Taxi Service", repo: "jcrtaxiservice", live: "https://jabalpurcarrental.netlify.app/", shot: "https://image.thum.io/get/https://jabalpurcarrental.netlify.app/", color: "#7AD7FF", tags: ["React", "TypeScript", "Tailwind CSS"], blurb: "A mobile-first Jabalpur taxi rental website with vehicle, tour and route information plus validated WhatsApp enquiry flows." },
-  { name: "VibeShare", repo: "social-vibe-app", color: "#FF8FB1", tags: ["React", "Spring Boot", "WebSocket"], blurb: "Social sharing app with user interactions and real-time chat." },
-  { name: "EstateVision AI", repo: "EstateVision-AI", color: "#7AD7FF", tags: ["React", "TypeScript", "Django REST"], blurb: "Real-estate platform concept for builder projects and customer enquiries." },
-  { name: "Splitr", repo: "split-clone", color: "#A3FFBF", tags: ["Next.js", "TypeScript"], blurb: "Split shared expenses and track balances with friends." },
-  { name: "SecureChatApp", repo: "SecureChatApp", color: "#9D8CFF", tags: ["Java", "Spring Boot", "JWT", "WebSocket"], blurb: "Messaging application with token-based authentication and real-time chat." },
-  { name: "LearnSphere", repo: "learnsphere", color: "#FFD27A", tags: ["Node.js", "Express", "MongoDB"], blurb: "Learning platform with course pages and content management." },
-  { name: "Job Board Platform", repo: "CodeAlpha_JobboardPlatform", live: "https://codealphajobplatform.netlify.app/", color: "#FF8FB1", tags: ["Django REST", "React", "PostgreSQL"], blurb: "Job portal with employer and candidate accounts, resumes and applications." },
-  { name: "Restaurant Management System", repo: "CodeAlpha_RestaurantManagement", live: "https://codealpharestaurantmanagement.onrender.com", color: "#7AD7FF", tags: ["Python", "Django REST", "PostgreSQL"], blurb: "API for menus, reservations, orders, inventory and daily sales." },
-  { name: "URL Shortener", repo: "CodeAlpha_URLShortener", color: "#A3FFBF", tags: ["Python", "Flask", "SQLite"], blurb: "Create short links and redirect visitors to their original URLs." },
-  { name: "Klimate Weather", repo: "Klimate-Weather", color: "#FFD27A", tags: ["React", "TypeScript"], blurb: "Weather dashboard with forecasts by city." }
+  { name: "VibeShare", repo: "social-vibe-app", shot: "/shots/vibeshare.webp", color: "#FF8FB1", tags: ["React", "Spring Boot", "WebSocket"], blurb: "Social sharing app with user interactions and real-time chat." },
+  { name: "EstateVision AI", repo: "EstateVision-AI", shot: "/shots/estatevision.webp", color: "#7AD7FF", tags: ["React", "TypeScript", "Django REST"], blurb: "Real-estate platform concept for builder projects and customer enquiries." },
+  { name: "Splitr", repo: "split-clone", shot: "/shots/splitr.webp", color: "#A3FFBF", tags: ["Next.js", "TypeScript"], blurb: "Split shared expenses and track balances with friends." },
+  { name: "SecureChatApp", repo: "SecureChatApp", shot: "/shots/securechat.webp", color: "#9D8CFF", tags: ["Java", "Spring Boot", "JWT", "WebSocket"], blurb: "Messaging application with token-based authentication and real-time chat." },
+  { name: "LearnSphere", repo: "learnsphere", shot: "/shots/learnsphere.webp", color: "#FFD27A", tags: ["Node.js", "Express", "MongoDB"], blurb: "Learning platform with course pages and content management." },
+  { name: "Job Board Platform", repo: "CodeAlpha_JobboardPlatform", shot: "/shots/jobboard.webp", live: "https://codealphajobplatform.netlify.app/", color: "#FF8FB1", tags: ["Django REST", "React", "PostgreSQL"], blurb: "Job portal with employer and candidate accounts, resumes and applications." },
+  { name: "Restaurant Management System", repo: "CodeAlpha_RestaurantManagement", shot: "/shots/restaurant.webp", live: "https://codealpharestaurantmanagement.onrender.com", color: "#7AD7FF", tags: ["Python", "Django REST", "PostgreSQL"], blurb: "API for menus, reservations, orders, inventory and daily sales." },
+  { name: "URL Shortener", repo: "CodeAlpha_URLShortener", shot: "/shots/url-shortener.webp", color: "#A3FFBF", tags: ["Python", "Flask", "SQLite"], blurb: "Create short links and redirect visitors to their original URLs." },
+  { name: "Klimate Weather", repo: "Klimate-Weather", shot: "/shots/klimate.webp", color: "#FFD27A", tags: ["React", "TypeScript"], blurb: "Weather dashboard with forecasts by city." }
 ];
 const repoUrl = p => `${GH}/${p.repo}`;
 const skills = {
