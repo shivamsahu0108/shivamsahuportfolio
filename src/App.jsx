@@ -82,8 +82,23 @@ function About() {
 function Skills() {
   return <section id="skills" className="sec"><Reveal as="h2">Tools I build with</Reveal><div className="skills">{Object.entries(skills).map(([cat,list],i)=><Reveal key={cat} delay={i*.08} className="skill-col"><h3>{cat}</h3><ul>{list.map(s=><li key={s} tabIndex={0}>{s}</li>)}</ul></Reveal>)}</div></section>;
 }
+// Preview priority: custom screenshot in /public/shots -> thum.io live-site capture -> initials fallback.
+const autoShot = (url) => `https://image.thum.io/get/width/1200/crop/750/noanimate/${url}`;
+
 function Project({ p, i, big }) {
-  return <Reveal as="article" className={`proj ${big ? "big" : ""} ${i%2 ? "flip" : ""}`} style={{ "--c":p.color }}><div className="shot" aria-hidden><span>{p.name.split(" ").map(w=>w[0]).join("").slice(0,3)}</span></div><div className="info"><h3>{p.name}</h3><p>{p.blurb}</p><ul className="tags">{p.tags.map(t=><li key={t}>{t}</li>)}</ul><div className="row"><a className="link" href={repoUrl(p)} target="_blank" rel="noreferrer"><Github size={16}/> Source code</a>{p.live && <a className="link" href={p.live} target="_blank" rel="noreferrer">Live demo <ArrowUpRight size={16}/></a>}</div></div></Reveal>;
+  const [failed, setFailed] = useState(false);
+  const src = p.shot || (p.live ? autoShot(p.live) : null);
+  return <Reveal as="article" className={`proj ${big ? "big" : ""} ${i % 2 ? "flip" : ""}`} style={{ "--c": p.color }}>
+    <div className="shot">
+      {src && !failed
+        ? <img src={src} alt={`${p.name} website preview`} loading="lazy" width="1200" height="750" onError={() => setFailed(true)} />
+        : <span aria-hidden>{p.name.split(" ").map(w => w[0]).join("").slice(0, 3)}</span>}
+      {p.live && <a className="badge" href={p.live} target="_blank" rel="noreferrer"><i /> Live</a>}
+    </div>
+    <div className="info"><h3>{p.name}</h3><p>{p.blurb}</p><ul className="tags">{p.tags.map(t => <li key={t}>{t}</li>)}</ul>
+      <div className="row"><a className="link" href={repoUrl(p)} target="_blank" rel="noreferrer"><Github size={16}/> Source code</a>{p.live && <a className="link" href={p.live} target="_blank" rel="noreferrer">Live demo <ArrowUpRight size={16}/></a>}</div>
+    </div>
+  </Reveal>;
 }
 function Projects() {
   const [all,setAll] = useState(false);
