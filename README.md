@@ -48,6 +48,7 @@ The portfolio currently features selected work from the developer's public repos
 - Zosh E-commerce
 - Hospital Management System
 - Go Taxi Service
+- Jabalpur Car Rental Taxi Service
 - VibeShare
 - EstateVision AI
 - Splitr (expense splitting)
