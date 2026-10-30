@@ -39,3 +39,24 @@ Review the `projects` array and verify descriptions, technology stacks, reposito
 Alternatively, run `npm run build` and drag the generated `dist` folder into Netlify Drop.
 
 Contact uses email links and public social profiles. WhatsApp appears after you add your number. No backend or paid form service is required.
+
+
+## Projects showcased
+
+The portfolio currently features selected work from the developer's public repositories:
+
+- Zosh E-commerce
+- Hospital Management System
+- Go Taxi Service
+- VibeShare
+- EstateVision AI
+- Splitr (expense splitting)
+- SecureChatApp
+- LearnSphere
+- Job Board Platform
+- Restaurant Management System
+- URL Shortener
+- Background Remover
+- Klimate Weather
+
+Project summaries and technology labels are based on the repository documentation and manifests. Review them periodically and keep only projects you are comfortable demonstrating to clients. Add or update live demo links only after checking that the deployments are publicly accessible.
