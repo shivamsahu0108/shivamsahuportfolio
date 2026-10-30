@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { Github, Linkedin, Mail, MessageCircle, ArrowUp, Menu, X, ArrowUpRight } from "lucide-react";
 import "./index.css";
