@@ -21,7 +21,6 @@ const projects = [
   { name: "Job Board Platform", repo: "CodeAlpha_JobboardPlatform", live: "https://codealphajobplatform.netlify.app/", color: "#FF8FB1", tags: ["Django REST", "React", "PostgreSQL"], blurb: "Job portal with employer and candidate accounts, resumes and applications." },
   { name: "Restaurant Management System", repo: "CodeAlpha_RestaurantManagement", live: "https://codealpharestaurantmanagement.onrender.com", color: "#7AD7FF", tags: ["Python", "Django REST", "PostgreSQL"], blurb: "API for menus, reservations, orders, inventory and daily sales." },
   { name: "URL Shortener", repo: "CodeAlpha_URLShortener", color: "#A3FFBF", tags: ["Python", "Flask", "SQLite"], blurb: "Create short links and redirect visitors to their original URLs." },
-  { name: "Background Remover", repo: "backgroundRemover", color: "#9D8CFF", tags: ["React", "Flask", "Python"], blurb: "Image utility for removing backgrounds and preparing transparent outputs." },
   { name: "Klimate Weather", repo: "Klimate-Weather", color: "#FFD27A", tags: ["React", "TypeScript"], blurb: "Weather dashboard with forecasts by city." }
 ];
 const repoUrl = p => `${GH}/${p.repo}`;
